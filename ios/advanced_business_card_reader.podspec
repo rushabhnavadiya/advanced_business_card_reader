@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'advanced_business_card_reader'
-  s.version          = '1.0.0'
+  s.version          = '1.1.1'
   s.summary          = 'Business card OCR and parsing using native Google ML Kit.'
   s.description      = <<-DESC
 Native OCR and entity extraction for advanced_business_card_reader using Google ML Kit.
@@ -12,18 +12,23 @@ Native OCR and entity extraction for advanced_business_card_reader using Google 
   s.source_files     = 'Classes/**/*'
   s.dependency 'Flutter'
 
-  s.dependency 'GoogleMLKit/TextRecognition', '8.0.0'
-  s.dependency 'GoogleMLKit/TextRecognitionChinese', '8.0.0'
-  s.dependency 'GoogleMLKit/TextRecognitionDevanagari', '8.0.0'
-  s.dependency 'GoogleMLKit/TextRecognitionJapanese', '8.0.0'
-  s.dependency 'GoogleMLKit/TextRecognitionKorean', '8.0.0'
-  s.dependency 'GoogleMLKit/EntityExtraction', '8.0.0'
+  s.dependency 'GoogleMLKit/TextRecognition', '~> 9.0.0'
+  s.dependency 'GoogleMLKit/TextRecognitionChinese', '~> 9.0.0'
+  s.dependency 'GoogleMLKit/TextRecognitionDevanagari', '~> 9.0.0'
+  s.dependency 'GoogleMLKit/TextRecognitionJapanese', '~> 9.0.0'
+  s.dependency 'GoogleMLKit/TextRecognitionKorean', '~> 9.0.0'
+  s.dependency 'GoogleMLKit/EntityExtraction', '~> 9.0.0'
 
   s.platform = :ios, '15.5'
+  s.ios.deployment_target = '15.5'
+  s.static_framework = true
   s.swift_version = '5.0'
 
   s.pod_target_xcconfig = {
     'DEFINES_MODULE' => 'YES',
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386'
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386 arm64'
+  }
+  s.user_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
   }
 end

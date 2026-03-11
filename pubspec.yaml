@@ -1,6 +1,6 @@
 name: advanced_business_card_reader
 description: Business/visiting card reader using native Google ML Kit Text Recognition v2 + Entity Extraction. Extracts text and parses name, company, phone, email, website.
-version: 1.1.0
+version: 1.1.1
 homepage: https://github.com/nousath/advanced_business_card_reader
 repository: https://github.com/nousath/advanced_business_card_reader
 issue_tracker: https://github.com/nousath/advanced_business_card_reader/issues

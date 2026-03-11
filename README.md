@@ -32,7 +32,7 @@ Additive API for double-side cards:
 
 ```yaml
 dependencies:
-  advanced_business_card_reader: ^1.0.0
+  advanced_business_card_reader: ^1.1.1
 ```
 
 ## Platform requirements
@@ -55,12 +55,19 @@ If you want a smaller binary, you can fork and remove script-specific recognizer
 - iOS deployment target: `15.5`
 - 64-bit devices only (Apple requirement)
 - Pods used by this plugin:
-  - `GoogleMLKit/TextRecognition` `8.0.0`
-  - `GoogleMLKit/TextRecognitionChinese` `8.0.0`
-  - `GoogleMLKit/TextRecognitionDevanagari` `8.0.0`
-  - `GoogleMLKit/TextRecognitionJapanese` `8.0.0`
-  - `GoogleMLKit/TextRecognitionKorean` `8.0.0`
-  - `GoogleMLKit/EntityExtraction` `8.0.0`
+  - `GoogleMLKit/TextRecognition` `~> 9.0.0`
+  - `GoogleMLKit/TextRecognitionChinese` `~> 9.0.0`
+  - `GoogleMLKit/TextRecognitionDevanagari` `~> 9.0.0`
+  - `GoogleMLKit/TextRecognitionJapanese` `~> 9.0.0`
+  - `GoogleMLKit/TextRecognitionKorean` `~> 9.0.0`
+  - `GoogleMLKit/EntityExtraction` `~> 9.0.0`
+
+### iOS simulator note
+
+Google ML Kit currently excludes `arm64` for iOS simulator builds. iOS 26+ simulator runtimes are `arm64`-only, so use:
+
+- a physical iOS device (recommended), or
+- an iOS simulator runtime that still supports `x86_64` (if available in your Xcode setup).
 
 Entity Extraction models are downloaded on-device with `downloadModelIfNeeded()` before annotation.
 

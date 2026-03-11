@@ -1,3 +1,9 @@
+## 1.1.1
+- Updated iOS podspec ML Kit dependencies to `~> 9.0.0`.
+- Added iOS simulator architecture exclusions for ML Kit (`arm64` on simulator) in podspec config.
+- Added iOS simulator limitation/workaround note to README.
+- Updated README install snippet to `advanced_business_card_reader: ^1.1.1`.
+
 ## 1.1.0
 - Replaced Dart-side OCR wrapper with direct native Google ML Kit integration via `MethodChannel` on Android and iOS.
 - Added native ML Kit Text Recognition v2 support for Latin, Devanagari, Chinese, Japanese, and Korean.
