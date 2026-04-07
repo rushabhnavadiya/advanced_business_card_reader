@@ -14,9 +14,7 @@ Native OCR and entity extraction for advanced_business_card_reader using Google 
 
   s.dependency 'GoogleMLKit/TextRecognition', '~> 9.0.0'
   s.dependency 'GoogleMLKit/TextRecognitionChinese', '~> 9.0.0'
-  s.dependency 'GoogleMLKit/TextRecognitionDevanagari', '~> 9.0.0'
   s.dependency 'GoogleMLKit/TextRecognitionJapanese', '~> 9.0.0'
-  s.dependency 'GoogleMLKit/TextRecognitionKorean', '~> 9.0.0'
   s.dependency 'GoogleMLKit/EntityExtraction', '~> 9.0.0'
 
   s.platform = :ios, '15.5'
